@@ -87,6 +87,7 @@ namespace Kernel
                 , tested_ever(0.0)
                 , diagnosed(0.0)
                 , tested_past_year_or_onART(0.0)
+                , tested_past_year(0.0)
                 , has_intervention(0.0)
                 , event_counter_map()
                 , currently_in_relationship_by_type(RelationshipType::COUNT,0.0f)
@@ -123,6 +124,7 @@ namespace Kernel
             float tested_ever;               // Tested ever
             float diagnosed;                 // Diagnosed HIV+
             float tested_past_year_or_onART; // Tested past year (or on ART)
+            float tested_past_year;          // Tested past year
             float has_intervention;
 
             std::map<std::string,float> event_counter_map; // count the ocurrences of events

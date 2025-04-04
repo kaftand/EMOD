@@ -546,6 +546,7 @@ namespace Kernel
                << "Died"                       << ", "
                << "Died_from_HIV"              << ", "
                << "Tested Past Year or On_ART" << ", "
+               << "Tested Past Year"           << ", "
                << "Tested Ever"                << ", "
                << "Diagnosed"                  << ", "
                << "Newly Tested Positive"      << ", "
@@ -684,6 +685,7 @@ namespace Kernel
                               << "," << data.newly_died
                               << "," << data.newly_died_from_HIV
                               << "," << data.tested_past_year_or_onART
+                              << "," << data.tested_past_year
                               << "," << data.tested_ever
                               << "," << data.diagnosed
                               << "," << data.newly_tested_positive
@@ -853,6 +855,9 @@ namespace Kernel
 
         if( testedPastYear || isOnART )
             data.tested_past_year_or_onART += mc_weight;
+
+        if (testedPastYear)
+            data.tested_past_year += mc_weight;
 
         if( testedEver )
             data.tested_ever += mc_weight;
